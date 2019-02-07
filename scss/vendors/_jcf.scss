@@ -1,0 +1,345 @@
+/* custom select styles */
+
+.jcf-select {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    background: #fff;
+    min-width: 137px;
+    width: 100%;
+    height: 34px;
+}
+
+.jcf-select select {
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.jcf-select .jcf-select-text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: default;
+    display: block;
+    font-size: 17px;
+    line-height: 34px;
+    margin: 0 35px 0 8px;
+}
+
+.jcf-select .jcf-select-opener {
+    position: absolute;
+    text-align: center;
+    background: #c3ccd5;
+    width: 34px;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    &:after {
+        content: "\e90c";
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        font-size: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+body>.jcf-select-drop {
+    position: absolute;
+    margin: -1px 0 0;
+    z-index: 9999;
+}
+
+body>.jcf-select-drop.jcf-drop-flipped {
+    margin: 1px 0 0;
+}
+
+.jcf-select .jcf-select-drop {
+    position: absolute;
+    margin-top: 0px;
+    z-index: 9999;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+}
+
+.jcf-select .jcf-drop-flipped {
+    bottom: 100%;
+    top: auto;
+}
+
+
+/* multiple select styles */
+
+.jcf-list-box {
+    overflow: hidden;
+    display: inline-block;
+    min-width: 200px;
+    margin: 0 15px;
+}
+
+
+/* select options styles */
+
+.jcf-list {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    background: rgba(255, 255, 255, .87);
+    font-size: 17px;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: "neusa", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 500;
+}
+
+.jcf-list .jcf-list-content {
+    vertical-align: top;
+    display: inline-block;
+    overflow: auto;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.jcf-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.jcf-list ul li {
+    overflow: hidden;
+    display: block;
+}
+
+.jcf-list .jcf-overflow {
+    overflow: auto;
+}
+
+.jcf-list .jcf-option {
+    overflow: hidden;
+    cursor: default;
+    display: block;
+    padding: 2px 17px;
+    color: #1e456b;
+    height: 1%;
+}
+
+.jcf-list .jcf-option[data-index="0"] {
+    height: 0;
+    padding: 0;
+}
+
+.jcf-list .jcf-disabled {
+    background: #fff !important;
+    color: #aaa !important;
+}
+
+.jcf-select-drop .jcf-hover,
+.jcf-list-box .jcf-selected {
+    color: #fff;
+    background: rgba(15, 53, 87, .86);
+}
+
+.jcf-list .jcf-optgroup-caption {
+    white-space: nowrap;
+    font-weight: bold;
+    display: block;
+    padding: 5px 9px;
+    cursor: default;
+    color: #000;
+}
+
+.jcf-list .jcf-optgroup .jcf-option {
+    padding-left: 30px;
+}
+
+
+/* custom scrollbars styles */
+
+.jcf-scrollable-wrapper {
+    box-sizing: content-box;
+    position: relative;
+}
+
+.jcf-scrollbar-vertical {
+    position: absolute;
+    cursor: default;
+    background: #e3e3e3;
+    width: 14px;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+    background: #bbb;
+    height: 14px;
+    width: 14px;
+    left: 0;
+    top: 0;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+    top: auto;
+    bottom: 0;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-handle {
+    background: #888;
+    height: 1px;
+    width: 14px;
+}
+
+.jcf-scrollbar-horizontal {
+    position: absolute;
+    background: #e3e3e3;
+    right: auto;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 14px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-dec,
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    background: #bbb;
+    height: 14px;
+    width: 14px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+    left: auto;
+    right: 0;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-slider {
+    display: inline-block;
+    position: relative;
+    height: 14px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-handle {
+    position: absolute;
+    background: #888;
+    height: 14px;
+}
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+    visibility: hidden;
+}
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-dec,
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-inc {
+    background: #e3e3e3;
+}
+
+/* custom checkbox styles */
+
+.jcf-checkbox {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    background: #44617c;
+    border: 1px solid #44617c;
+    margin: 0 21px 0 0;
+    height: 13px;
+    width: 13px;
+}
+
+.jcf-checkbox span {
+    position: absolute;
+    display: none;
+    height: 6px;
+    width: 9px;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -6px;
+    border: 3px solid #fff;
+    border-width: 0 0 3px 3px;
+    transform: rotate(-45deg);
+}
+
+ :root .jcf-checkbox span {
+    margin: -4px 0 0 -4px;
+}
+
+.jcf-checkbox input[type="checkbox"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+.jcf-checkbox.jcf-checked span {
+    display: block;
+}
+
+/* custom radio styles */
+
+.jcf-radio {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    background: #fff;
+    border: 1px solid #777;
+    border-radius: 9px;
+    margin: 0 3px 0 0;
+    height: 16px;
+    width: 16px;
+}
+
+.jcf-radio span {
+    display: none;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: #777;
+    border-radius: 100%;
+}
+
+.jcf-radio input[type="radio"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+.jcf-radio.jcf-checked span {
+    display: block;
+}
+
+
+/* common custom form elements styles */
+
+.jcf-disabled {
+    background: #ddd !important;
+}
+.jcf-option-hidden{
+    display:none !important;
+}

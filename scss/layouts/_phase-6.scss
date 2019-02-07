@@ -1,0 +1,651 @@
+.container.home-sales-container {
+	display: flex;
+	align-items: flex-start;
+	padding: 95px 0 0 0;
+	@include media ('<widescreen') {
+		padding: 93px 0 0 0;
+	}
+	@include media ('<desktop') {
+		padding: 99px 0 0 0;
+	}
+	@include media ('<tablet') {
+		flex-wrap: wrap;
+		padding: 91px 0 0 0;
+	}
+}
+.home-sales-content {
+	width: 100%;
+	h2 {
+		font-size: 53px;
+		@include media ('<phone') {
+			font-size: 40px;
+		}
+	}
+	.blog-post-info {
+		a {
+			color: $blue;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+#sidebar-2 {
+	padding: 105px 20px;
+	flex: 0 0 auto;
+	max-width: 372px;
+	@include media ('<desktop') {
+		max-width: 330px;
+	}
+	@include media ('<tablet') {
+		max-width: 100%;
+		width: 100%;
+		padding: 30px 20px;
+	}
+	@include media ('<phone') {
+		padding: 30px 15px;
+	}
+}
+.aside-nav {
+	@extend %listreset;
+	font-family: $neusa;
+	font-weight: 500;
+	font-size: 17px;
+	text-transform: uppercase;
+	margin: 0 0 100px 0;
+	@include media ('<tablet') {
+		display: none;
+	}
+	li {
+		margin-bottom: 17px;
+	}
+	a {
+		@include animate(color);
+		text-decoration: none;
+		color: $blue;
+		&:hover {
+			color: $yellow;
+		}
+	}
+	&.aside-nav-responsive {
+		display: none;
+		@include media ('<tablet') {
+			display: block;
+			margin: 0;
+			padding: 30px 15px;
+			width: 100%;
+		}
+		li {
+			text-align: center;
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+.aside-content {
+	h3, h6 {
+		font-family: $neusa-next;
+		font-weight: 500;
+	}
+	h3 {
+		font-size: 25px;
+		text-transform: uppercase;
+		margin: 0 0 .4em 0;
+	}
+	h6 {
+		font-size: 17px;
+		margin: 0 0 1em 0;
+		font-weight: 700;
+		@include media ('<phone') {
+			font-size: 15px;
+		}
+		a {
+			text-decoration: none;
+			color: $blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	ul {
+		@extend %listreset;
+	}
+	li {
+		@include animate(opacity);
+		display: flex;
+		align-items: center;
+		margin: 0 0 20px 0;
+		&:hover {
+			opacity: .4;
+		}
+		.img-block {
+			display: block;
+			flex: 0 0 auto;
+			margin: 0 10px 0 0;
+		}
+		.blog-post-info {
+			margin: 0;
+		}
+	}
+	> .img-block {
+		@include animate(opacity);
+		display: block;
+		margin: 0 0 8px 0;
+		&:hover {
+			opacity: .4;
+		}
+		img {
+			@include media ('<tablet') {
+				width: 100%;
+			}
+		}
+	}
+	.blog-post-info {
+		display: block;
+		margin: 29px 0 18px 0;
+		font-family: $neusa-next;
+		text-transform: uppercase;
+		font-size: 9px;
+		a {
+			text-decoration: none;
+			color: $blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.home-sales-main {
+	.img-block {
+		img {
+			width: 100%;
+		}
+	}
+	article {
+		padding: 50px 66px 0 30px;
+		font-size: 25px;
+		letter-spacing: -1.3px;
+		@include media ('<tablet') {
+			padding: 50px 15px 0 15px;
+		}
+		@include media ('<phone') {
+			font-size: 20px;
+		}
+		.img-block {
+			margin: 36px 0 39px 0;
+		}
+	}
+	h2 {
+		margin: 0 0 .6em 0;
+	}
+}
+.home-sales-types {
+	font-size: 20px;
+	padding: 30px 45px 0 3px;
+	@include media ('<tablet') {
+		padding: 10px 15px 0 15px;
+	}
+	ul {
+		@extend %listreset;
+	}
+	h2 {
+		text-align: center;
+		margin: 0 0 1.2em 0;
+		@include media ('<tablet') {
+			margin: 0 0 1em 0;
+		}
+	}
+	h6 {
+		font-size: 20px;
+		font-family: $base-font-sans-serif;
+		font-weight: 700;
+		margin: 0 0 6px 20px;
+		@include media ('<tablet') {
+			margin: 0 0 6px 15px;
+		}
+		@include media ('<phone') {
+			margin: 0 0 6px 0;
+		}
+	}
+	li {
+		margin: 0 0 7px 0;
+		&:last-child {
+			@include media ('<tablet') {
+				margin: 0;
+			}
+		}
+	}
+	.holder {
+		padding: 30px 0 0 25px;
+		margin: 0 0 8px 0;
+		display: flex;
+		align-items: flex-start;
+		border-top: 1px solid $blue;
+		@include media ('<desktop') {
+			flex-wrap: wrap;
+		}
+		@include media ('<tablet') {
+			padding: 30px 0 0 15px;
+			margin: 0;
+		}
+		@include media ('<phone') {
+			padding: 30px 0 0 0;
+		}
+	}
+	.img-block {
+		flex: 0 0 auto;
+		@include media ('<desktop') {
+			order: -1;
+			margin: 0 0 20px 0;
+		}
+		@include media ('<phone') {
+			width: 100%;
+		}
+		img {
+			@include media ('<phone') {
+				width: 100%;
+			}
+		}
+	}
+	.text-block {
+		margin: 0 45px 0 0;
+		@include media ('<desktop') {
+			margin: 0 30px 0 0;
+		}
+		@include media ('<tablet') {
+			margin: 0;
+		}
+	}
+	.btn-holder {
+		text-align: center;
+		margin: 0 0 26px 0;
+		@include media ('<tablet') {
+			margin: 5px 0 30px 0;
+		}
+	}
+	.btn {
+		background-color: #526d86;
+		color: $white;
+		text-transform: uppercase;
+		border-radius: 0;
+		border: 0;
+		font-weight: 500;
+		font-family: $neusa;
+		font-size: 20px;
+		padding: 8px 58px;
+		min-width: 200.25px;
+		min-height: 40px;
+		&:hover {
+			background-color: $blue;
+		}
+		i {
+			display: none;
+		}
+	}
+	.active {
+		.btn {
+			padding: 10px 58px;
+			span {
+				display: none;
+			}
+			i {
+				display: block;
+			}
+		}
+	}
+	.slide-types {
+		padding: 0 0 0 28px;
+		@include media ('<tablet') {
+			padding: 0;
+		}
+	}
+}
+.home-sales-buying {
+	font-size: 20px;
+	@include media ('<desktop') {
+		font-size: 18px;
+	}
+	@include media ('<phone') {
+		font-size: 16px;
+	}
+	ul {
+		@extend %listreset;
+		p {
+			margin: 0 0 1.2em 0;
+		}
+	}
+	li {
+		padding: 15px 35px;
+		&:nth-child(even) {
+			background-color: rgba(15, 53, 87, .08);
+		}
+		@include media ('<desktop') {
+			padding: 15px 25px;
+		}
+		@include media ('<phone') {
+			padding: 15px;
+		}
+		span {
+			display: block;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: $blue;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	address {
+		font-style: normal;
+	}
+	h2 {
+		margin: 0 0 .3em 0;
+	}
+	.text-holder {
+		text-align: center;
+		padding: 48px 75px;
+		@include media ('<desktop') {
+			padding: 30px 30px;
+		}
+		@include media ('<phone') {
+			padding: 20px;
+		}
+	}
+	.title {
+		background-color: rgba(15, 53, 87, .08);
+		font-weight: 700;
+		padding: 21px 5px 15px 5px;
+	}
+	.find-block {
+		margin: 5px 0 30px 0;
+		@include media ('<tablet') {
+			margin: 5px 0 0 0;
+		}
+	}
+}
+.home-sales-finncing, .home-sales-selling {
+	padding: 10px 0 0 0;
+	font-size: 20px;
+	h2 {
+		margin: 0 0 .6em 0;
+	}
+	.text-holder {
+		position: relative;
+		margin: 0 0 64px 0;
+		@include media ('<desktop') {
+			margin: 0 0 30px 0;
+		}
+	}
+	.text-wrapper {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		max-width: 605px;
+		margin: 0 auto;
+		padding: 128px 15px 67px 15px;
+		@include media ('<desktop') {
+			padding: 70px 15px 40px 15px;
+		}
+		@include media ('<tablet') {
+			padding: 0 15px 10px 15px;
+		}
+	}
+	.blog-section {
+		padding: 40px 0 29px 0;
+	}
+	.blog-posts {
+		li {
+			@include media ('<desktop') {
+				width: 50%;
+			}
+			@include media ('<phone') {
+				width: 100%;
+			}
+		}
+	}
+}
+.home-sales-faq {
+	font-size: 20px;
+	padding: 68px 55px 0 80px;
+	@include media ('<desktop') {
+		padding: 68px 20px 0 20px;
+	}
+	@include media ('<tablet') {
+		padding: 20px 15px 0 15px;
+	}
+	ul {
+		@extend %listreset;
+	}
+	h2 {
+		text-align: center;
+		margin: 0 0 .6em 0;
+		@include media ('<desktop') {
+			font-size: 42px;
+		}
+		@include media ('<phone') {
+			font-size: 40px;
+		}
+	}
+	li {
+		margin: 0 0 49px 0;
+		@include media ('<tablet') {
+			margin: 0 0 30px 0;
+		}
+		&:last-child {
+			@include media ('<tablet') {
+				margin: 0;
+			}
+		}
+	}
+}
+.home-sales-request {
+	padding: 0 0 30px 0;
+	h2 {
+		text-align: center;
+		margin: 0 0 .3em 0;
+	}
+	.img-block {
+		img {
+			width: 100%;
+		}
+	}
+	.holder {
+		padding: 23px 36px;
+		@include media ('<desktop') {
+			padding: 23px 20px;
+		}
+	}
+}
+.intro-why-us {
+	@include media ('<tablet') {
+		margin: 0 0 10px 0;
+	}
+	&:before {
+		display: none;
+	}
+	.title {
+		text-transform: uppercase;
+	}
+}
+.add-nav-holder-2 {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	bottom: -1px;
+	.add-nav-2 {
+		@extend %listreset;
+		display: flex;
+		justify-content: center;
+		text-transform: uppercase;
+		font-family: $neusa;
+		font-weight: 500;
+		font-size: 17px;
+		flex-wrap: wrap;
+		background-color: $white;
+		z-index: 10;
+		a {
+			@include animate(color);
+			padding: 13px 45px;
+			display: block;
+			color: $blue;
+			text-decoration: none;
+			@include media ('<widescreen') {
+				padding: 13px 25px;
+			}
+			@include media ('<desktop') {
+				padding: 13px 15px;
+				font-size: 16px;
+			}
+			@include media ('<tablet') {
+				padding: 7px 15px;
+				font-size: 14px;
+			}
+			@include media ('<phone') {
+				font-size: 16px;
+			}
+			&:hover {
+				color: $yellow;
+			}
+		}
+		li {
+			@include media ('<phone') {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
+.why-sun {
+	font-size: 20px;
+	padding: 35px 0 0 0;
+	h2 {
+		font-size: 53px;
+		margin: 0 0 .5em 0;
+		@include media ('<phone') {
+			font-size: 40px;
+		}
+	}
+	.container {
+		position: relative;
+		padding: 0;
+	}
+	.text-holder {
+		position: relative;
+		z-index: 1;
+		max-width: 810px;
+		padding: 0 15px;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+.here-section {
+	padding: 43px 0 34px 0;
+	@include media ('<tablet') {
+		padding: 30px 0 34px 0;
+	}
+	.bg-stretch {
+		transform: translate(59%, -22%);
+		background-size: 100%;
+	}
+}
+.types-section, .age-section {
+	background-color: rgba(15, 53, 87, .05);
+	ul {
+		@extend %listreset;
+		margin: 44px 0 0 0;
+	}
+	li {
+		position: relative;
+		padding: 40px 34px;
+		@include media ('<tablet') {
+			padding: 20px;
+		}
+	}
+	h3 {
+		text-align: center;
+		font-size: 53px;
+		margin: 0 0 .6em 0;
+		@include media ('<phone') {
+			font-size: 40px;
+		}
+	}
+	.text-block {
+		position: relative;
+		z-index: 1;
+		background-color: rgba(15, 53, 87, .77);
+		max-width: 394px;
+		color: $white;
+		padding: 55px 44px 72px 44px;
+		@include media ('<desktop') {
+			padding: 40px 30px 50px 30px;
+		}
+		@include media ('<tablet') {
+			padding: 30px 20px 40px 20px;
+		}
+	}
+}
+.age-section {
+	background-color: $white;
+}
+.bark-section, .sunwifi-section {
+	background-color: $white;
+	.img-holder {
+		margin: 61px 0 0 0;
+		position: relative;
+	}
+}
+.bark-section {
+	.img-holder {
+		height: 596px;
+		@include media ('<desktop') {
+			height: 400px;
+		}
+		@include media ('<tablet') {
+			height: 300;
+		}
+	}
+	.text-holder {
+		max-width: 710px;
+	}
+}
+.sunwifi-section {
+	padding: 35px 0 61px 0;
+	.img-holder {
+		height: 689px;
+		@include media ('<desktop') {
+			height: 500px;
+		}
+		@include media ('<tablet') {
+			height: 400;
+		}
+	}
+	.text-holder {
+		max-width: 860px;
+	}
+}
+.blog-section-why {
+	background-color: rgba(15, 53, 87, .05);
+	.blog-post-info {
+		a {
+			text-decoration: none;
+			color: $blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.blog-section-home {
+	.blog-post-info {
+		a {
+			text-decoration: none;
+			color: $blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

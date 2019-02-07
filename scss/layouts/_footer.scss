@@ -1,0 +1,436 @@
+#footer {
+	background-color: #012a3f;
+	.container {
+		position: relative;
+		padding: 55px 15px 0 15px;
+		@include media ('<phone') {
+			padding: 40px 15px 0 15px;
+		}
+	}
+	.bg-stretch{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: auto;
+		margin: 0;
+		background-position: top left;
+		background-size: auto;
+	}
+}
+.footer-holder {
+	position: relative;
+	overflow: hidden;
+	.row {
+		z-index: 1;
+		position: relative;
+		padding: 35px 0;
+		max-width: 1075px;
+		margin: 0 auto;
+		color: $white;
+		display: flex;
+		justify-content: space-between;
+		font-size: 16px;
+		@include media ('<tablet') {
+			flex-wrap: wrap;
+			padding: 20px 0;
+		}
+		@include media ('<phone') {
+			padding: 20px 0 8px 0;
+		}
+		.text-block {
+			border-right: 1px solid rgba(255, 255, 255, .08);
+			width: 390px;
+			flex: 0 0 auto;
+			padding: 0 60px 0 0;
+			margin: 0 30px 0 0;
+			@include media ('<desktop') {
+				width: 250px;
+				padding: 0 30px 0 0;
+			}
+			@include media ('<tablet') {
+				width: 100%;
+				border-right: none;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+				padding: 0 0 16px 0;
+				margin: 0;
+				margin-bottom: 20px;
+			}
+			p {
+				margin: 0 0 .1em 0;
+			}
+		}
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+	h6 {
+		font-family: $neusa;
+		font-weight: 500;
+		font-size: 17px;
+		margin: 0 0 .8em 0;
+		color: $yellow;
+		text-transform: uppercase;
+		@include media ('<desktop') {
+			font-size: 15px;
+		}
+	}
+}
+.footer-nav {
+	@extend %listreset;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -30px 0 0;
+	align-items: flex-start;
+	max-width: 610px;
+	font-family: $neusa-next;
+	text-transform: uppercase;
+	font-size: 13px;
+	@include media ('<phone') {
+		margin: 0;
+	}
+	>li {
+		width: 33.33%;
+		padding: 0 30px 0 0;
+		@include media ('<desktop') {
+			padding: 0 15px 0 0;
+		}
+		@include media ('<phone') {
+			width: 100%;
+			padding: 0;
+			margin-bottom: 12px;
+		}
+	}
+	ul {
+		@extend %listreset;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			width: 100%;
+			margin: 0 0 10px 0;
+		}
+	}
+	h6 {
+		margin: 0 0 .6em 0;
+	}
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.contacts {
+	@extend %listreset;
+	z-index: 1;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	color: $white;
+	font-family: $neusa-next;
+	margin: 0 auto 30px auto;
+	max-width: 1024px;
+	@include media ('<tablet') {
+		margin: 0 -20px 20px 0;
+	}
+	@include media ('<phone') {
+		margin: 0 0 20px;
+	}
+	a {
+		@include animate(opacity);
+		color: $white;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		&:hover {
+			opacity: .7;
+		}
+		@include media ('<phone') {
+			flex-wrap: wrap;
+		}
+	}
+	.highlighter {
+		color: $yellow;
+	}
+	li {
+		position: relative;
+		margin: 0 0 10px 0;
+		@include media ('<tablet') {
+			width: 50%;
+			padding-right: 20px;
+		}
+		@include media ('<phone') {
+			width: 100%;
+			padding-right: 0;
+		}
+		&:not(:last-child) {
+			margin-right: 30px;
+			@include media ('<desktop') {
+				margin-right: 20px;
+			}
+			@include media ('<tablet') {
+				margin-right: 0;
+			}
+		}
+	}
+	i {
+		font-size: 24px;
+		margin: 0 22px 0 0;
+		@include media ('<desktop') {
+			font-size: 20px;
+			margin: 0 15px 0 0;
+		}
+		@include media ('<phone') {
+			width: 10%;
+			text-align: center;
+		}
+	}
+	address {
+		font-style: normal;
+	}
+}
+.highlighter {
+	color: $yellow;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	@include media ('<tablet') {
+		width: auto;
+	}
+}
+.social {
+	@extend %listreset;
+	z-index: 1;
+	position: relative;
+	font-family: $neusa;
+	font-weight: 500;
+	font-size: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid $white;
+	border-bottom: 1px solid $white;
+	padding: 12px 0;
+	color: $white;
+	@include media ('<desktop') {
+		font-size: 15px;
+	}
+	@include media ('<tablet') {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		padding: 22px 0 12px 0;
+	}
+	>li {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			&:after {
+				content: '|';
+				margin: 0 33px;
+				@include media ('<desktop') {
+					margin: 0 20px;
+				}
+				@include media ('<tablet') {
+					content: none;
+				}
+			}
+		}
+		&:last-child {
+			width: 44%;
+			@include media ('<tablet') {
+				width: 100%;
+			}
+			@include media ('<phone') {
+				.title {
+					width: 100%;
+				}
+			}
+		}
+		&:first-child {
+			@include media ('<tablet') {
+				margin-right: 30px;
+			}
+		}
+		@include media ('<tablet') {
+			margin-bottom: 10px;
+		}
+		@include media ('<phone') {
+			width: 100%;
+			flex-wrap: wrap;
+			margin-bottom: 15px;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: $white;
+	}
+	.title {
+		text-transform: uppercase;
+		color: $white;
+	}
+	a.highlighter {
+		@include animate(color);
+		color: $yellow;
+		&:hover {
+			color: darken($yellow, 15%);
+		}
+	}
+	form {
+		@include media ('<desktop') {
+			margin: 0 0 0 20px;
+		}
+		@include media ('<tablet') {
+			max-width: 230px;
+		}
+		@include media ('<phone') {
+			margin: 7px 0 0 0;
+		}
+	}
+}
+.icon-blog {
+	width: 17px;
+	margin: 0 0 0 5px;
+}
+.social-networks {
+	@extend %listreset;
+	margin: 0 0 0 28px;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	@include media ('<desktop') {
+		margin: 0 0 0 20px;
+	}
+	li {
+		&:not(:last-child) {
+			margin: 0 8px 0 0;
+		}
+	}
+	a {
+		@include animate(color);
+		&:hover {
+			color: $yellow;
+		}
+	}
+	i {
+		font-size: 20px;
+	}
+}
+.copyright {
+	z-index: 1;
+	position: relative;
+	background-color: rgba(1, 35, 48, .9);
+	padding: 0 9999px;
+	margin: 0 -9999px;
+	font-family: $neusa;
+	font-size: 12.5px;
+	font-weight: 500;
+	color: rgba(126, 129, 131, .6);
+	.holder {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 5px 0;
+		@include media ('<tablet') {
+			padding: 10px 0 5px 0;
+		}
+		@include media ('<phone') {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			padding: 20px 0;
+		}
+	}
+	ul {
+		@extend %listreset;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-wrap: wrap;
+		max-width: 80%;
+		margin: 0 auto;
+		padding: 0 0 0 7px;
+		@include media ('<tablet') {
+			padding: 0;
+			max-width: 100%;
+			width: 100%;
+			padding-right: 20px;
+			justify-content: flex-start;
+		}
+		@include media ('<phone') {
+			padding-right: 0;
+		}
+		li {
+			@include media ('<tablet') {
+				&:first-child {
+					width: 100%;
+				}
+				margin-bottom: 5px;
+			}
+			&:not(:last-child) {
+				&:after {
+					content: '|';
+					margin: 0 7px;
+					@include media ('<tablet') {
+						display: none;
+					}
+				}
+			}
+		}
+		a {
+			color: rgba(126, 129, 131, .6);
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.logo-footer {
+	width: 85px;
+	flex: 0 0 auto;
+	margin: 0 50px 0 0;
+	@include media ('<phone') {
+		order: -1;
+		margin: 0 0 15px 0;
+	}
+}
+.footer-form {
+	position: relative;
+	margin: 0 0 0 23px;
+	max-width: 277px;
+	width: 100%;
+	input[type="email"] {
+		font-family: $neusa;
+		border-radius: 17px;
+		outline: none;
+		border: 0;
+		font-weight: 500;
+		padding: 8px 43px 8px 20px;
+		background-color: rgba(255, 255, 255, .65);
+		color: $blue;
+		width: 100%;
+		&::placeholder {
+			text-transform: uppercase;
+			color: $blue;
+		}
+	}
+	button {
+		@include animate(color);
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		border: 0;
+		outline: 0;
+		background-color: transparent;
+		color: $blue;
+		padding: 0 13px;
+		&:hover {
+			color: lighten($blue, 15%);
+		}
+	}
+	i {
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,10 @@
+@import '../base/mixins';
+
+@include font-face (neusa, Neusa-Regular, 400, normal);
+@include font-face (neusa, Neusa-Medium, 500, normal);
+@include font-face (neusa-next, NeusaNextPro-Regular, 400, normal);
+@include font-face (neusa-next, NeusaNextPro-Medium, 500, normal);
+@include font-face (neusa-next, NeusaNextPro-MediumItalic, 500, italic);
+@include font-face (neusa-next, NeusaNextPro-Bold, 700, normal);
+@include font-face (good-karma, GoodKarma-Regular, 400, normal);
+@include font-face (acaslon, ACaslonPro-Regular, 400, normal);
